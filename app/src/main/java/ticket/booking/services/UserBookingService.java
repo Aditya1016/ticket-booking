@@ -14,7 +14,7 @@ public class UserBookingService {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String USERS_PATH = "../localDB/users.json";
+    private static final String USERS_PATH = "app/src/main/java/ticket/booking/localDB/users.json";
 
     public UserBookingService(User user) throws IOException {
         this.user = user;
@@ -32,7 +32,7 @@ public class UserBookingService {
     public Boolean signUp(User user1){
         try {
             userList.add(user1);
-            saveUserListToFile();
+//            saveUserListToFile();
             return Boolean.TRUE;
         } catch(Exception ex){
             return Boolean.FALSE;
